@@ -55,24 +55,23 @@ class _CircularCountdownState extends State<CircularCountdown> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        buildTimeContainer(hours, 'Hours'),
-        buildTimeContainer(minutes, 'Minutes'),
-        buildTimeContainer(seconds, 'Seconds'),
+        TimeContainer(hours, 'Hours'),
+        TimeContainer(minutes, 'Minutes'),
+        TimeContainer(seconds, 'Seconds'),
       ],
     );
   }
 
-  Widget buildTimeContainer(int timeValue, String label) {
+  Widget TimeContainer(int timeValue, String label) {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.all(3.0),
+          padding: const EdgeInsets.only(top: 5,left: 10,right: 10),
           child: Container(
-              width: 65,
-              height: 65,
-              decoration: BoxDecoration(
+              width: 40,
+              height: 40,
+              decoration: const BoxDecoration(
                 color: Colors.white,
                 shape: BoxShape.circle,
               ),
@@ -82,19 +81,21 @@ class _CircularCountdownState extends State<CircularCountdown> {
                   decoration: BoxDecoration(
                       color: Colors.white,
                       shape: BoxShape.circle,
-                      border: Border.all(color: bgColor2, width: 2)),
+                      border: Border.all(color: bgColor2, width: 1.5)
+                  ),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Text("$timeValue",style: TextStyle(
-                        fontFamily: 'poppins',color: Colors.black87,fontSize: 20,fontWeight: FontWeight.w600
-                      ),),Text("$label",style: TextStyle(
-                        fontFamily: 'poppins',color: Colors.black38,fontSize: 6,fontWeight: FontWeight.w600
-                      ),)
+                      Text("$timeValue",style: const TextStyle(
+                        fontFamily: 'poppins',color: Colors.black87,fontSize: 16,fontWeight: FontWeight.w600
+                      ),),Text("$label",style: const TextStyle(
+                        fontFamily: 'poppins',color: Colors.black87,fontSize: 5,fontWeight: FontWeight.w400,
+                      ),
+                      )
                     ],
                   ),
                 ),
-              )),
+              )
+          ),
         ),
       ],
     );

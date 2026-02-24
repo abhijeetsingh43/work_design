@@ -17,25 +17,26 @@ class _HomeBalanceCardState extends State<HomeBalanceCard> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 10,left: 15,right: 15),
+      padding: const EdgeInsets.only(top: 12,left: 15,right: 15),
       child: Container(
         width: double.infinity,
+        height: 160,
 
         decoration: BoxDecoration(
-          color: bgColor2.withOpacity(0.3),
-          borderRadius: BorderRadius.circular(20),
+          color: bgColor,
+          borderRadius: BorderRadius.circular(10),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+            const Padding(
+              padding: EdgeInsets.only(top: 10,left: 10,right: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Coupon Details:",style: TextStyle(fontFamily: "poppins",color: Colors.black87,fontSize: 12,fontWeight: FontWeight.w500),)
-                  ,Text("Price per Slot = \$5",style: TextStyle(fontFamily: "poppins",color: Colors.black87,fontSize: 12,fontWeight: FontWeight.w500),)
+                  Text("Coupon Details:",style: TextStyle(fontFamily: "poppins",color: Colors.black87,fontSize: 10,fontWeight: FontWeight.w500),)
+                  ,Text("Price per Slot = \$5",style: TextStyle(fontFamily: "poppins",color: Colors.black87,fontSize: 10,fontWeight: FontWeight.w500),)
                 ],
               ),
             ),
@@ -46,19 +47,24 @@ class _HomeBalanceCardState extends State<HomeBalanceCard> {
                 children: [
                   for(int i=0;i<listItems.length;i++)
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.only(top: 9,left: 10,bottom: 9),
                       child: Container(
-                        width: 40,
-                        height: 70,
+                        width: 30,
+                        height: 46,
                         decoration: BoxDecoration(
-                          color: bgColor2,
+                            gradient: const LinearGradient(
+                              colors: [listContainer,listContainer1],
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                            ),
                           borderRadius: BorderRadius.circular(20)
+
                         ),
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            Text(listItems[i]['pName'],style: TextStyle(fontWeight: FontWeight.w500,fontSize: 15,fontFamily: 'poppins',color: Colors.white),)
-                            ,Text(listItems[i]['rate'],style: TextStyle(fontWeight: FontWeight.w500,fontSize: 15,fontFamily: 'poppins',color: Colors.white),)
+                            Text(listItems[i]['pName'],style: const TextStyle(fontWeight: FontWeight.w500,fontSize: 10,fontFamily: 'poppins',color: Colors.white),)
+                            ,Text(listItems[i]['rate'],style: const TextStyle(fontWeight: FontWeight.w500,fontSize: 10,fontFamily: 'poppins',color: Colors.white),)
                           ],
                         ),
                       ),
@@ -71,34 +77,34 @@ class _HomeBalanceCardState extends State<HomeBalanceCard> {
               child: Container(
                 height: 2,
                 width: double.infinity,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: bgColor2
                 ),
               ),
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
-                    child: Text("Balance:",style: TextStyle(fontWeight: FontWeight.w400,fontSize: 17,fontFamily: 'poppins',color: Colors.black87),),
+                    padding: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+                    child: Text("Balance:",style: TextStyle(fontWeight: FontWeight.w400,fontSize: 12,fontFamily: 'poppins',color: Colors.black87),),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: Text("\$1453",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 25,fontFamily: 'poppins',color: Colors.black87),),
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    child: Text("\$1453",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 18,fontFamily: 'poppins',color: Colors.black87),),
                   )
                 ],
                 ),
                 Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10),
-                      child: Text("Remaining Time",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 15,fontFamily: 'poppins',color: Colors.black87),),
+                      padding: EdgeInsets.symmetric(horizontal: 10),
+                      child: Text("Remaining Time",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 10,fontFamily: 'poppins',color: Colors.black87),),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: EdgeInsets.only(top: 4,bottom: 5),
                       child:CircularCountdown()
                     )
                   ],

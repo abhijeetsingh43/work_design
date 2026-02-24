@@ -17,23 +17,23 @@ class _HomeBcFilterSectionState extends State<HomeBcFilterSection> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Padding(
-          padding: const EdgeInsets.only(left: 20,top: 15),
+          padding: const EdgeInsets.only(left: 25,top: 15),
           child: Row(
             children: [
-              Image.asset("assets/images/store.png"),
-            SizedBox(width: 10,),
-              Text("BC",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 20,color: Colors.black87,fontFamily: 'poppins'),)],
+              Image.asset("assets/images/store.png",width: 20,height: 20,),
+            const SizedBox(width: 10,),
+              const Text("BC",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 14,color: Colors.black87,fontFamily: 'poppins'),)],
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 10,right: 20,bottom: 10),
+          padding: const EdgeInsets.only(top: 10,right: 25,bottom: 10),
           child: GestureDetector(
             onTap: (){
-
+              //working of filter button
             },
             child: Container(
-              width: 30, // Adjust size as needed
-              height: 30, // Adjust size as needed
+              width: 25,
+              height: 25,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
                 color: Colors.white,
@@ -47,7 +47,7 @@ class _HomeBcFilterSectionState extends State<HomeBcFilterSection> {
                 ],
               ),
               child:  Center(
-                child: Image.asset("assets/images/filter.png",width: 20,height: 20,)
+                child: Image.asset("assets/images/filter.png",width: 17,height: 14,)
               ),
             ),
           ),

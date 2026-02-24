@@ -20,18 +20,18 @@ class _FirstHomeSliderState extends State<FirstHomeSlider> {
           child: PageView(
             controller: _pageController,
             children: [
-              _buildImageSlide("assets/images/first_slide_first_pic.png"),
-              _buildImageSlide("assets/images/first_slide_first_pic.png"),
-              _buildImageSlide("assets/images/first_slide_first_pic.png"),
+              ImageSlide("assets/images/first_slide_first_pic.png"),
+              ImageSlide("assets/images/first_slide_first_pic.png"),
+              ImageSlide("assets/images/first_slide_first_pic.png"),
             ],
           ),
         ),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         SmoothPageIndicator(
           controller: _pageController,
           count: 3,
-          effect: ExpandingDotsEffect(
-            dotColor: Colors.grey.withOpacity(0.5),
+          effect: const ExpandingDotsEffect(
+            dotColor: Colors.white60,
             activeDotColor: Colors.white,
             dotHeight: 3,
             dotWidth: 12,
@@ -40,7 +40,7 @@ class _FirstHomeSliderState extends State<FirstHomeSlider> {
           onDotClicked: (index) {
             _pageController.animateToPage(
               index,
-              duration: Duration(milliseconds: 300),
+              duration: const Duration(milliseconds: 300),
               curve: Curves.bounceIn,
             );
           },
@@ -49,12 +49,14 @@ class _FirstHomeSliderState extends State<FirstHomeSlider> {
     );
   }
 
-  Widget _buildImageSlide(String imagePath) {
+  Widget ImageSlide(String imagePath) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 15),
       child: Image.asset(
         imagePath,
         fit: BoxFit.fitHeight,
+        width: 157.59,
+        height: 195.74,
       ),
     );
   }

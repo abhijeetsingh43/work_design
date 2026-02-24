@@ -10,16 +10,22 @@ class HorizontalScrollText extends StatefulWidget {
 class _HorizontalScrollTextState extends State<HorizontalScrollText> {
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 40,
-      child: ListView(
+    return const SizedBox(
+      height: 20,
+      child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
-        children: [
-          Text(
+        child: Padding(
+          padding: EdgeInsets.only(left: 15),
+          child: Text(
             "Jacksmith just bought 2 coupons(AB)        Jacksmith just bought 2 coupons(AB))        Jacksmith just bought 2 coupons(AB)        Jacksmith just bought 2 coupons(AB)  ",
-            style: TextStyle(fontFamily: "poppins",color: Colors.green,fontWeight: FontWeight.w500),
+            style: TextStyle(
+              fontFamily: "poppins",
+              color: Colors.green,
+              fontWeight: FontWeight.w500,
+              fontSize: 12,
+            ),
           ),
-        ],
+        ),
       ),
     );
   }

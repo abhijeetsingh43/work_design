@@ -88,6 +88,9 @@ flutter:
     - family: italy
       fonts:
         - asset: assets/fonts/Italianno-Regular.ttf
+    - family: roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Medium.ttf
 
 
 

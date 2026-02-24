@@ -1,4 +1,12 @@
 import 'dart:ui';
-const bgColor2 = Color(0xffff6f54);
+const bgColor2 = Color(0xffF33F41);
+const bgColor1 = Color(0xffFB6D72);
+const bgColor = Color(0xffFFDEE2);
 const whte = Color(0xffffffff);
 const shoppingcart = Color(0xff6b5552);
+const dropDownMenu = Color(0xffFF0A25);
+const dropDownMenu1 = Color(0xffFD4D3D);
+const buttonGrocery = Color(0xffF33F41);
+const buttonGrocery2 = Color(0xffFB6D72);
+const listContainer = Color(0xffFB6D72);
+const listContainer1 = Color(0xffF33F41);

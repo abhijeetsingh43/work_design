@@ -30,8 +30,8 @@ class _HomePageState extends State<HomePage> {
         leading: Padding(
           padding: const EdgeInsets.only(top: 10, left: 20, bottom: 10),
           child: Container(
-            width: 40,
-            height: 40,
+            width: 36,
+            height: 36,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(5),
               color: Colors.white,
@@ -44,12 +44,8 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
-            child: const Center(
-              child: Icon(
-                color: bgColor2,
-                FontAwesomeIcons.navicon,
-                size: 22,
-              ),
+            child:  Center(
+              child: Image.asset("assets/images/navigation.png"),
             ),
           ),
         ),
@@ -93,11 +89,11 @@ class _HomePageState extends State<HomePage> {
             selected = index;
           });
         },
-        children: [
+        children:  const [
           HomeContentBar(),
-          Center(child: Text('Star Page Content')),
-          Center(child: Text('Style Page Content')),
-          Center(child: Text('Profile Page Content')),
+          Center(child: Text('Manual Page Content')),
+          Center(child: Text('Stats Page Content')),
+          Center(child: Text('Giveaway Page Content')),
         ],
       ),
       bottomNavigationBar: StylishBottomBar(
@@ -114,41 +110,41 @@ class _HomePageState extends State<HomePage> {
             selectedColor: bgColor2,
             unSelectedColor: Colors.grey,
             title: const Text('Home',
-                style: TextStyle(fontFamily: 'poppins', fontSize: 10)),
+                style: TextStyle(fontFamily: 'roboto', fontSize: 13)),
           ),
           BottomBarItem(
-            icon: Padding(
-              padding: const EdgeInsets.only(right: 30),
+            icon: const Padding(
+              padding: EdgeInsets.only(right: 30),
               child: Icon(Icons.book, size: 20),
             ),
-            selectedIcon: Padding(
+            selectedIcon: const Padding(
               padding: EdgeInsets.only(right: 30),
               child: Icon(Icons.book, size: 20),
             ),
             selectedColor: Colors.red,
             unSelectedColor: Colors.grey,
-            title: Padding(
-              padding: const EdgeInsets.only(right: 30),
-              child: const Text('Manual',
-                  style: TextStyle(fontFamily: 'poppins', fontSize: 10)),
+            title: const Padding(
+              padding: EdgeInsets.only(right: 30),
+              child: Text('Manual',
+                  style: TextStyle(fontFamily: 'roboto', fontSize: 13)),
             ),
           ),
           BottomBarItem(
-            icon: Padding(
-              padding: const EdgeInsets.only(left: 30),
-              child: const Icon(Icons.bar_chart_rounded),
+            icon: const Padding(
+              padding: EdgeInsets.only(left: 30),
+              child: Icon(Icons.bar_chart_rounded),
             ),
-            selectedIcon: Padding(
-              padding: const EdgeInsets.only(left: 30),
-              child: const Icon(Icons.bar_chart_rounded,
+            selectedIcon: const Padding(
+              padding: EdgeInsets.only(left: 30),
+              child: Icon(Icons.bar_chart_rounded,
                   color: Colors.deepOrangeAccent),
             ),
             selectedColor: Colors.deepOrangeAccent,
             unSelectedColor: Colors.grey,
-            title: Padding(
-              padding: const EdgeInsets.only(left: 30),
-              child: const Text('Stats',
-                  style: TextStyle(fontFamily: 'poppins', fontSize: 10)),
+            title: const Padding(
+              padding: EdgeInsets.only(left: 30),
+              child: Text('Stats',
+                  style: TextStyle(fontFamily: 'roboto', fontSize: 13)),
             ),
           ),
           BottomBarItem(
@@ -162,7 +158,7 @@ class _HomePageState extends State<HomePage> {
             unSelectedColor: Colors.grey,
             title: const Text(
               'Giveaway',
-              style: TextStyle(fontFamily: 'poppins', fontSize: 10),
+              style: TextStyle(fontFamily: 'roboto', fontSize: 13),
             ),
           ),
         ],
@@ -178,7 +174,7 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: Container(
         width: 90,
         height: 90,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Colors.white,
           shape: BoxShape.circle,
         ),
@@ -197,13 +193,12 @@ class _HomePageState extends State<HomePage> {
                 child: Container(
                   width: 70,
                   height: 70,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: bgColor2,
                     shape: BoxShape.circle,
                   ),
                   child: IconButton(
-                    icon: const Icon(Icons.qr_code_scanner_outlined,
-                        color: Colors.white),
+                    icon: Image.asset("assets/images"),
                     onPressed: () {
                       // Handle button press
                     },
